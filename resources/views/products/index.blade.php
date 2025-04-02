@@ -18,15 +18,16 @@
             <table class="table table-bordered">
 
                 <tr>
-                    {{-- <th>No</th> --}}
+                    <th>No</th>
                     <th>Name</th>
                     <th>Price</th>
                     <th>Description</th>
                     <th width="280px">Action</th>
                 </tr>
-                @foreach ($products as $product)
+
+                @foreach ($products as $index => $product)
                 <tr>
-                    {{-- <td>{{ ++$i }}</td> --}}
+                    <td>{{ $index + 1 }}</td>
                     <td>{{ $product->name }}</td>
                     <td>{{ $product->price }}</td>
                     <td>{{ $product->description }}</td>
